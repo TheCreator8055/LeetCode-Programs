@@ -23,6 +23,9 @@ jobs:
 
       - name: Fetch LeetCode submissions
         run: python scripts/fetch_leetcode.py
+        env:
+            LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+
 
       - name: Organize problems
         run: python scripts/organize.py
