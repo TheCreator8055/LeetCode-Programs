@@ -80,7 +80,7 @@ for sub in submissions:
     page = requests.get(submission_url, headers=headers)
 
     if page.status_code != 200:
-        print("Failed to open submission:", submission_id)
+        print("Failed:", submission_id, "Status:", page.status_code)
         continue
 
     code = extract_code(page.text)
