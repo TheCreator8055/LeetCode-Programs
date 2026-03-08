@@ -28,10 +28,10 @@ jobs:
         run: pip install requests
 
       - name: Organize problems
-        run: python scripts/organize.py
+        run: python .github/scripts/organize.py
 
       - name: Update README
-        run: python scripts/update_readme.py
+        run: python .github/scripts/update_readme.py
 
       - name: Commit organized repo
         run: |
