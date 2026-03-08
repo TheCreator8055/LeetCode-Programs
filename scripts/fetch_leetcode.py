@@ -1,5 +1,7 @@
 import os
 import requests
+import re
+import time
 
 SESSION = os.getenv("LEETCODE_SESSION")
 
@@ -11,12 +13,7 @@ headers = {
     "user-agent": "Mozilla/5.0"
 }
 
-url = "https://leetcode.com/api/submissions/?offset=0&limit=1000"
-
-res = requests.get(url, headers=headers)
-data = res.json()
-
-submissions = data["submissions_dump"]
+SUBMISSION_API = "https://leetcode.com/api/submissions/?offset=0&limit=1000"
 
 EXTENSIONS = {
     "python": ".py",
@@ -27,42 +24,67 @@ EXTENSIONS = {
     "javascript": ".js"
 }
 
+def extract_code(page_text):
+    """
+    Extract submission code from submission page HTML.
+    """
+    pattern = r'submissionCode:\s*"(.+?)"'
+    match = re.search(pattern, page_text, re.DOTALL)
+
+    if not match:
+        return None
+
+    code = match.group(1)
+    return code.encode().decode("unicode_escape")
+
+
+print("Fetching submissions...")
+
+res = requests.get(SUBMISSION_API, headers=headers)
+
+if res.status_code != 200:
+    raise Exception("Failed to fetch submissions")
+
+data = res.json()
+submissions = data.get("submissions_dump", [])
+
 saved = 0
+skipped = 0
 
 for sub in submissions:
 
     if sub["status_display"] != "Accepted":
         continue
 
-    title = sub["title_slug"]
+    title_slug = sub["title_slug"]
+    question_id = str(sub["question_id"]).zfill(4)
     lang = sub["lang"].lower()
 
     if lang not in EXTENSIONS:
+        skipped += 1
         continue
 
     ext = EXTENSIONS[lang]
-    filename = f"{sub['question_id']}-{title}{ext}"
+
+    filename = f"{question_id}-{title_slug}{ext}"
 
     if os.path.exists(filename):
         continue
 
-    code_url = f"https://leetcode.com/submissions/detail/{sub['id']}/"
+    submission_id = sub["id"]
+    submission_url = f"https://leetcode.com/submissions/detail/{submission_id}/"
 
-    page = requests.get(code_url, headers=headers)
+    page = requests.get(submission_url, headers=headers)
 
     if page.status_code != 200:
+        print("Failed to open submission:", submission_id)
         continue
 
-    # crude extraction of code
-    text = page.text
-    start = text.find("submissionCode:")
-    if start == -1:
+    code = extract_code(page.text)
+
+    if not code:
+        print("Could not extract code:", submission_id)
         continue
-
-    code_start = text.find('"', start) + 1
-    code_end = text.find('"', code_start)
-
-    code = text[code_start:code_end].encode().decode("unicode_escape")
 
     with open(filename, "w", encoding="utf-8") as f:
         f.write(code)
@@ -70,4 +92,8 @@ for sub in submissions:
     saved += 1
     print("Saved:", filename)
 
+    time.sleep(0.5)  # avoid rate limiting
+
+print("\nSummary")
 print("New files downloaded:", saved)
+print("Skipped unsupported languages:", skipped)
