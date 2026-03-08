@@ -4,16 +4,17 @@ Automatically synced solutions from LeetCode.
 
 ## 📊 Statistics
 
-**Total Problems Solved: 52**
+**Total Problems Solved: 55**
 
 | Topic | Problems |
 |------|------|
-| 01-arrays | 5 |
+| 01-arrays | 6 |
 | 02-two-pointers | 5 |
 | 05-binary-search | 1 |
 | 06-linked-list | 2 |
+| 11-backtracking | 1 |
 | 15-strings | 6 |
-| 16-misc | 33 |
+| 16-misc | 34 |
 
 
 ---
@@ -23,6 +24,7 @@ Automatically synced solutions from LeetCode.
 | # | Problem | Topic |
 |---|---|---|
 | 0034 | [Find First And Last Position Of Element In Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | 01-arrays |
+| 0059 | [Spiral Matrix Ii](https://leetcode.com/problems/spiral-matrix-ii/) | 01-arrays |
 | 0026 | [Remove Duplicates From Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 01-arrays |
 | 0167 | [Two Sum Ii   Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii---input-array-is-sorted/) | 01-arrays |
 | 0004 | [Median Of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 01-arrays |
@@ -35,6 +37,7 @@ Automatically synced solutions from LeetCode.
 | 0035 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | 05-binary-search |
 | 0019 | [Remove Nth Node From End Of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | 06-linked-list |
 | 0023 | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 06-linked-list |
+| 0060 | [Permutation Sequence](https://leetcode.com/problems/permutation-sequence/) | 11-backtracking |
 | 0005 | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | 15-strings |
 | 0028 | [Find The Index Of The First Occurrence In A String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 15-strings |
 | 0030 | [Substring With Concatenation Of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | 15-strings |
@@ -59,6 +62,7 @@ Automatically synced solutions from LeetCode.
 | 0027 | [Remove Element](https://leetcode.com/problems/remove-element/) | 16-misc |
 | 0049 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | 16-misc |
 | 0006 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | 16-misc |
+| 0058 | [Length Of Last Word](https://leetcode.com/problems/length-of-last-word/) | 16-misc |
 | 0011 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 16-misc |
 | 0048 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | 16-misc |
 | 0042 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 16-misc |

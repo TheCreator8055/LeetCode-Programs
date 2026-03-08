@@ -154,5 +154,14 @@
   },
   "0033-search-in-rotated-sorted-array": {
     "name": "0033-search-in-rotated-sorted-array"
+  },
+  "0059-spiral-matrix-ii": {
+    "name": "0059-spiral-matrix-ii"
+  },
+  "0060-permutation-sequence": {
+    "name": "0060-permutation-sequence"
+  },
+  "0058-length-of-last-word": {
+    "name": "0058-length-of-last-word"
   }
 }
