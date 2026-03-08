@@ -1,4 +1,5 @@
 import os
+import json
 
 topics = [
 "01-arrays",
@@ -19,11 +20,22 @@ topics = [
 "16-misc"
 ]
 
+metadata_file = "problems.json"
+
+if os.path.exists(metadata_file):
+    with open(metadata_file, "r", encoding="utf-8") as f:
+        metadata = json.load(f)
+else:
+    metadata = {}
+
 rows = ""
+problem_rows = ""
 total = 0
 
 for topic in topics:
+
     if os.path.exists(topic):
+
         files = [
             f for f in os.listdir(topic)
             if os.path.isfile(os.path.join(topic, f))
@@ -33,6 +45,20 @@ for topic in topics:
         total += count
 
         rows += f"| {topic} | {count} |\n"
+
+        for file in files:
+
+            number = file.split("-")[0]
+
+            name = file.replace(".py","").replace(".cpp","").replace(".java","")
+
+            title = name.split("-",1)[1].replace("-", " ").title()
+
+            url_name = title.lower().replace(" ", "-")
+
+            link = f"https://leetcode.com/problems/{url_name}/"
+
+            problem_rows += f"| {number} | [{title}]({link}) | {topic} |\n"
 
 
 readme = f"""# 🚀 LeetCode Problem Archive
@@ -49,35 +75,17 @@ Automatically synced solutions from LeetCode.
 
 ---
 
-## 📂 Repository Structure
+## 📚 Problems
 
-Problems are organized by **Data Structures and Algorithms topics**.
-
-Example structure:
-
-01-arrays  
-02-two-pointers  
-03-sliding-window  
-04-stack  
-05-binary-search  
-06-linked-list  
-07-trees  
-08-heap  
-09-graphs  
-10-dynamic-programming  
+| # | Problem | Topic |
+|---|---|---|
+{problem_rows}
 
 ---
 
-## 📄 File Naming Convention
+## 📂 Repository Structure
 
-Each solution follows this format:
-
-problem-number-problem-name.extension
-
-Example:
-
-0001-two-sum.py  
-0704-binary-search.cpp  
+Problems are organized by **DSA topics**.
 
 ---
 
@@ -86,8 +94,8 @@ Example:
 This repository automatically:
 
 • syncs solved problems from LeetCode  
-• organizes them by DSA topic  
-• updates the README statistics dashboard  
+• organizes them by topic  
+• updates README statistics  
 
 using GitHub Actions.
 """
