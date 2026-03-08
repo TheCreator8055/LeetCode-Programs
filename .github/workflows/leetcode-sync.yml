@@ -38,9 +38,8 @@ jobs:
             git config --global user.name "leetcode-bot"
             git config --global user.email "actions@github.com"
         
-            git pull origin main --rebase
         
             git add .
             git commit -m "Organize LeetCode solutions" || echo "No changes"
-        
+            git pull origin main --rebase || echo "Already updated"
             git push origin main || echo "Nothing to push"
