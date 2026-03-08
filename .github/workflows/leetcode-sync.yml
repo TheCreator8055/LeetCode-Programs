@@ -25,6 +25,7 @@ jobs:
         run: python scripts/fetch_leetcode.py
         env:
             LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+            LEETCODE_CSRF_TOKEN: ${{ secrets.LEETCODE_CSRF_TOKEN }}
 
 
       - name: Organize problems
