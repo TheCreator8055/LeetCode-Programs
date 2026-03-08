@@ -1,1 +1,158 @@
-{}
+{
+  "0007-reverse-integer": {
+    "name": "0007-reverse-integer"
+  },
+  "0018-4sum": {
+    "name": "0018-4sum"
+  },
+  "0009-palindrome-number": {
+    "name": "0009-palindrome-number"
+  },
+  "0040-combination-sum-ii": {
+    "name": "0040-combination-sum-ii"
+  },
+  "0034-find-first-and-last-position-of-element-in-sorted-array": {
+    "name": "0034-find-first-and-last-position-of-element-in-sorted-array"
+  },
+  "0045-jump-game-ii": {
+    "name": "0045-jump-game-ii"
+  },
+  "0019-remove-nth-node-from-end-of-list": {
+    "name": "0019-remove-nth-node-from-end-of-list"
+  },
+  "0041-first-missing-positive": {
+    "name": "0041-first-missing-positive"
+  },
+  "0047-permutations-ii": {
+    "name": "0047-permutations-ii"
+  },
+  "0005-longest-palindromic-substring": {
+    "name": "0005-longest-palindromic-substring"
+  },
+  "0014-longest-common-prefix": {
+    "name": "0014-longest-common-prefix"
+  },
+  "0037-sudoku-solver": {
+    "name": "0037-sudoku-solver"
+  },
+  "0028-find-the-index-of-the-first-occurrence-in-a-string": {
+    "name": "0028-find-the-index-of-the-first-occurrence-in-a-string"
+  },
+  "0001-two-sum": {
+    "name": "0001-two-sum"
+  },
+  "0016-3sum-closest": {
+    "name": "0016-3sum-closest"
+  },
+  "0020-valid-parentheses": {
+    "name": "0020-valid-parentheses"
+  },
+  "0024-swap-nodes-in-pairs": {
+    "name": "0024-swap-nodes-in-pairs"
+  },
+  "0021-merge-two-sorted-lists": {
+    "name": "0021-merge-two-sorted-lists"
+  },
+  "0015-3sum": {
+    "name": "0015-3sum"
+  },
+  "0044-wildcard-matching": {
+    "name": "0044-wildcard-matching"
+  },
+  "0013-roman-to-integer": {
+    "name": "0013-roman-to-integer"
+  },
+  "0027-remove-element": {
+    "name": "0027-remove-element"
+  },
+  "0030-substring-with-concatenation-of-all-words": {
+    "name": "0030-substring-with-concatenation-of-all-words"
+  },
+  "0008-string-to-integer-atoi": {
+    "name": "0008-string-to-integer-atoi"
+  },
+  "0049-group-anagrams": {
+    "name": "0049-group-anagrams"
+  },
+  "0006-zigzag-conversion": {
+    "name": "0006-zigzag-conversion"
+  },
+  "0026-remove-duplicates-from-sorted-array": {
+    "name": "0026-remove-duplicates-from-sorted-array"
+  },
+  "0023-merge-k-sorted-lists": {
+    "name": "0023-merge-k-sorted-lists"
+  },
+  "0003-longest-substring-without-repeating-characters": {
+    "name": "0003-longest-substring-without-repeating-characters"
+  },
+  "0002-add-two-numbers": {
+    "name": "0002-add-two-numbers"
+  },
+  "0371-sum-of-two-integers": {
+    "name": "0371-sum-of-two-integers"
+  },
+  "0035-search-insert-position": {
+    "name": "0035-search-insert-position"
+  },
+  "0011-container-with-most-water": {
+    "name": "0011-container-with-most-water"
+  },
+  "0048-rotate-image": {
+    "name": "0048-rotate-image"
+  },
+  "0167-two-sum-ii---input-array-is-sorted": {
+    "name": "0167-two-sum-ii---input-array-is-sorted"
+  },
+  "0042-trapping-rain-water": {
+    "name": "0042-trapping-rain-water"
+  },
+  "0029-divide-two-integers": {
+    "name": "0029-divide-two-integers"
+  },
+  "0017-letter-combinations-of-a-phone-number": {
+    "name": "0017-letter-combinations-of-a-phone-number"
+  },
+  "0031-next-permutation": {
+    "name": "0031-next-permutation"
+  },
+  "0010-regular-expression-matching": {
+    "name": "0010-regular-expression-matching"
+  },
+  "0043-multiply-strings": {
+    "name": "0043-multiply-strings"
+  },
+  "0022-generate-parentheses": {
+    "name": "0022-generate-parentheses"
+  },
+  "0039-combination-sum": {
+    "name": "0039-combination-sum"
+  },
+  "0012-integer-to-roman": {
+    "name": "0012-integer-to-roman"
+  },
+  "0046-permutations": {
+    "name": "0046-permutations"
+  },
+  "0025-reverse-nodes-in-k-group": {
+    "name": "0025-reverse-nodes-in-k-group"
+  },
+  "0032-longest-valid-parentheses": {
+    "name": "0032-longest-valid-parentheses"
+  },
+  "0036-valid-sudoku": {
+    "name": "0036-valid-sudoku"
+  },
+  "0004-median-of-two-sorted-arrays": {
+    "name": "0004-median-of-two-sorted-arrays"
+  },
+  "0050-powx-n": {
+    "name": "0050-powx-n"
+  },
+  "0038-count-and-say": {
+    "name": "0038-count-and-say"
+  },
+  "0033-search-in-rotated-sorted-array": {
+    "name": "0033-search-in-rotated-sorted-array"
+  }
+}
