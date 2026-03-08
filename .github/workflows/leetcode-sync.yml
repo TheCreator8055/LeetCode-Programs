@@ -1,0 +1,42 @@
+name: LeetCode Auto Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch submissions
+        env:
+          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+        run: python scripts/fetch_leetcode.py
+
+      - name: Organize problems
+        run: python scripts/organize.py
+
+      - name: Update README dashboard
+        run: python scripts/update_readme.py
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "leetcode-bot"
+          git config --global user.email "bot@github.com"
+          git add .
+          git diff --cached --quiet || git commit -m "Auto update LeetCode solutions"
+          git push
