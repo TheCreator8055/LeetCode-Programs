@@ -1,37 +1,73 @@
 import os
 import requests
-import json
 
-session_cookie = os.environ.get("LEETCODE_SESSION")
+SESSION = os.getenv("LEETCODE_SESSION")
 
-if not session_cookie:
-    print("LEETCODE_SESSION not found")
-    exit(1)
+if not SESSION:
+    raise Exception("Missing LEETCODE_SESSION secret")
 
 headers = {
-    "Content-Type": "application/json",
-    "Cookie": f"LEETCODE_SESSION={session_cookie}"
+    "cookie": f"LEETCODE_SESSION={SESSION}",
+    "user-agent": "Mozilla/5.0"
 }
 
-query = """
-{
-  matchedUser(username: "Shivanantham_M") {
-    submitStats {
-      acSubmissionNum {
-        difficulty
-        count
-      }
-    }
-  }
+url = "https://leetcode.com/api/submissions/?offset=0&limit=1000"
+
+res = requests.get(url, headers=headers)
+data = res.json()
+
+submissions = data["submissions_dump"]
+
+EXTENSIONS = {
+    "python": ".py",
+    "python3": ".py",
+    "cpp": ".cpp",
+    "c": ".c",
+    "java": ".java",
+    "javascript": ".js"
 }
-"""
 
-response = requests.post(
-    "https://leetcode.com/graphql",
-    json={"query": query},
-    headers=headers
-)
+saved = 0
 
-data = response.json()
+for sub in submissions:
 
-print(json.dumps(data, indent=2))
+    if sub["status_display"] != "Accepted":
+        continue
+
+    title = sub["title_slug"]
+    lang = sub["lang"].lower()
+
+    if lang not in EXTENSIONS:
+        continue
+
+    ext = EXTENSIONS[lang]
+    filename = f"{sub['question_id']}-{title}{ext}"
+
+    if os.path.exists(filename):
+        continue
+
+    code_url = f"https://leetcode.com/submissions/detail/{sub['id']}/"
+
+    page = requests.get(code_url, headers=headers)
+
+    if page.status_code != 200:
+        continue
+
+    # crude extraction of code
+    text = page.text
+    start = text.find("submissionCode:")
+    if start == -1:
+        continue
+
+    code_start = text.find('"', start) + 1
+    code_end = text.find('"', code_start)
+
+    code = text[code_start:code_end].encode().decode("unicode_escape")
+
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(code)
+
+    saved += 1
+    print("Saved:", filename)
+
+print("New files downloaded:", saved)
