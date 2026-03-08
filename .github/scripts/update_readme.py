@@ -38,7 +38,7 @@ for topic in topics:
 
         files = [
             f for f in os.listdir(topic)
-            if os.path.isfile(os.path.join(topic, f))
+            if os.path.isdir(os.path.join(topic, f))
         ]
 
         count = len(files)
