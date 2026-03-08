@@ -1,7 +1,6 @@
 import os
 import shutil
 import json
-import re
 
 topics = {
     "array": "01-arrays",
@@ -22,7 +21,9 @@ topics = {
     "string": "15-strings"
 }
 
-IGNORE_FILES = {
+IGNORE = {
+    ".git",
+    ".github",
     "organize.py",
     "update_readme.py",
     "fetch_leetcode.py",
@@ -41,39 +42,36 @@ if os.path.exists(metadata_file):
 else:
     metadata = {}
 
-files = [f for f in os.listdir(".") if os.path.isfile(f)]
+items = os.listdir(".")
 
-for file in files:
+for item in items:
 
-    if file in IGNORE_FILES:
+    if item in IGNORE:
         continue
 
-    if file.startswith("."):
+    if item in topics_folders:
         continue
 
-    lower = file.lower()
+    if item.startswith("."):
+        continue
+
+    if not os.path.isdir(item):
+        continue
+
+    lower = item.lower()
     moved = False
 
-    problem_match = re.match(r"(\d+)[-_](.*)\.", file)
-
-    if problem_match:
-        number = problem_match.group(1)
-        name = problem_match.group(2).replace("-", " ").replace("_", " ").title()
-
-        metadata[number] = {
-            "name": name,
-            "file": file
-        }
-
     for key in topics:
+
         if key in lower:
 
             folder = topics[key]
-
             os.makedirs(folder, exist_ok=True)
 
-            if not os.path.exists(os.path.join(folder, file)):
-                shutil.move(file, os.path.join(folder, file))
+            dest = os.path.join(folder, item)
+
+            if not os.path.exists(dest):
+                shutil.move(item, dest)
 
             moved = True
             break
@@ -82,8 +80,14 @@ for file in files:
 
         os.makedirs("16-misc", exist_ok=True)
 
-        if not os.path.exists(os.path.join("16-misc", file)):
-            shutil.move(file, os.path.join("16-misc", file))
+        dest = os.path.join("16-misc", item)
+
+        if not os.path.exists(dest):
+            shutil.move(item, dest)
+
+    metadata[item] = {
+        "name": item
+    }
 
 with open(metadata_file, "w", encoding="utf-8") as f:
     json.dump(metadata, f, indent=2)
