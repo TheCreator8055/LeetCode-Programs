@@ -4,15 +4,20 @@ import re
 import time
 
 SESSION = os.getenv("LEETCODE_SESSION")
+CSRF = os.getenv("LEETCODE_CSRF_TOKEN")
 
 if not SESSION:
     raise Exception("Missing LEETCODE_SESSION secret")
 
+if not CSRF:
+    raise Exception("Missing LEETCODE_CSRF_TOKEN secret")
+
 headers = {
-    "cookie": f"LEETCODE_SESSION={SESSION}",
-    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "cookie": f"LEETCODE_SESSION={SESSION}; csrftoken={CSRF}",
+    "x-csrftoken": CSRF,
     "referer": "https://leetcode.com",
     "origin": "https://leetcode.com",
+    "user-agent": "Mozilla/5.0",
     "content-type": "application/json"
 }
 
@@ -27,12 +32,9 @@ EXTENSIONS = {
     "javascript": ".js"
 }
 
-def extract_code(page_text):
-    """
-    Extract submission code from submission page HTML.
-    """
+def extract_code(page):
     pattern = r'submissionCode:\s*"(.+?)"'
-    match = re.search(pattern, page_text, re.DOTALL)
+    match = re.search(pattern, page, re.DOTALL)
 
     if not match:
         return None
@@ -46,9 +48,10 @@ print("Fetching submissions...")
 res = requests.get(SUBMISSION_API, headers=headers)
 
 if res.status_code != 200:
-    raise Exception("Failed to fetch submissions")
+    raise Exception(f"Failed to fetch submissions: {res.status_code}")
 
 data = res.json()
+
 submissions = data.get("submissions_dump", [])
 
 saved = 0
@@ -68,13 +71,13 @@ for sub in submissions:
         continue
 
     ext = EXTENSIONS[lang]
-
     filename = f"{question_id}-{title_slug}{ext}"
 
     if os.path.exists(filename):
         continue
 
     submission_id = sub["id"]
+
     submission_url = f"https://leetcode.com/submissions/detail/{submission_id}/"
 
     page = requests.get(submission_url, headers=headers)
@@ -86,7 +89,7 @@ for sub in submissions:
     code = extract_code(page.text)
 
     if not code:
-        print("Could not extract code:", submission_id)
+        print("Code extraction failed:", submission_id)
         continue
 
     with open(filename, "w", encoding="utf-8") as f:
@@ -95,7 +98,7 @@ for sub in submissions:
     saved += 1
     print("Saved:", filename)
 
-    time.sleep(0.5)  # avoid rate limiting
+    time.sleep(1)
 
 print("\nSummary")
 print("New files downloaded:", saved)
