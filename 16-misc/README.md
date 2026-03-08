@@ -4,11 +4,10 @@ Automatically synced solutions from LeetCode.
 
 ## 📊 Statistics
 
-**Total Problems Solved: 1**
+**Total Problems Solved: 0**
 
 | Topic | Problems |
 |------|------|
-| 16-misc | 1 |
 
 
 ---
