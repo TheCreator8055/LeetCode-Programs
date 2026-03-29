@@ -163,5 +163,143 @@
   },
   "0058-length-of-last-word": {
     "name": "0058-length-of-last-word"
+  },
+  "0088-merge-sorted-array": {
+    "name": "0088-merge-sorted-array"
+  },
+  "0081-search-in-rotated-sorted-array-ii": {
+    "name": "0081-search-in-rotated-sorted-array-ii"
+  },
+  "0065-valid-number": {
+    "name": "0065-valid-number"
+  },
+  "0069-sqrtx": {
+    "name": "0069-sqrtx"
+  },
+  "0098-validate-binary-search-tree": {
+    "name": "0098-validate-binary-search-tree"
+  },
+  "0084-largest-rectangle-in-histogram": {
+    "name": "0084-largest-rectangle-in-histogram"
+  },
+  "0067-add-binary": {
+    "name": "0067-add-binary"
+  },
+  "0095-unique-binary-search-trees-ii": {
+    "name": "0095-unique-binary-search-trees-ii"
+  },
+  "0076-minimum-window-substring": {
+    "name": "0076-minimum-window-substring"
+  },
+  "0073-set-matrix-zeroes": {
+    "name": "0073-set-matrix-zeroes"
+  },
+  "0053-maximum-subarray": {
+    "name": "0053-maximum-subarray"
+  },
+  "0075-sort-colors": {
+    "name": "0075-sort-colors"
+  },
+  "0055-jump-game": {
+    "name": "0055-jump-game"
+  },
+  "0077-combinations": {
+    "name": "0077-combinations"
+  },
+  "0054-spiral-matrix": {
+    "name": "0054-spiral-matrix"
+  },
+  "0064-minimum-path-sum": {
+    "name": "0064-minimum-path-sum"
+  },
+  "0087-scramble-string": {
+    "name": "0087-scramble-string"
+  },
+  "0083-remove-duplicates-from-sorted-list": {
+    "name": "0083-remove-duplicates-from-sorted-list"
+  },
+  "0099-recover-binary-search-tree": {
+    "name": "0099-recover-binary-search-tree"
+  },
+  "0096-unique-binary-search-trees": {
+    "name": "0096-unique-binary-search-trees"
+  },
+  "0089-gray-code": {
+    "name": "0089-gray-code"
+  },
+  "0090-subsets-ii": {
+    "name": "0090-subsets-ii"
+  },
+  "0079-word-search": {
+    "name": "0079-word-search"
+  },
+  "0093-restore-ip-addresses": {
+    "name": "0093-restore-ip-addresses"
+  },
+  "0100-same-tree": {
+    "name": "0100-same-tree"
+  },
+  "0061-rotate-list": {
+    "name": "0061-rotate-list"
+  },
+  "0071-simplify-path": {
+    "name": "0071-simplify-path"
+  },
+  "0051-n-queens": {
+    "name": "0051-n-queens"
+  },
+  "0063-unique-paths-ii": {
+    "name": "0063-unique-paths-ii"
+  },
+  "0080-remove-duplicates-from-sorted-array-ii": {
+    "name": "0080-remove-duplicates-from-sorted-array-ii"
+  },
+  "0066-plus-one": {
+    "name": "0066-plus-one"
+  },
+  "0078-subsets": {
+    "name": "0078-subsets"
+  },
+  "0092-reverse-linked-list-ii": {
+    "name": "0092-reverse-linked-list-ii"
+  },
+  "0056-merge-intervals": {
+    "name": "0056-merge-intervals"
+  },
+  "0094-binary-tree-inorder-traversal": {
+    "name": "0094-binary-tree-inorder-traversal"
+  },
+  "0062-unique-paths": {
+    "name": "0062-unique-paths"
+  },
+  "0091-decode-ways": {
+    "name": "0091-decode-ways"
+  },
+  "0052-n-queens-ii": {
+    "name": "0052-n-queens-ii"
+  },
+  "0068-text-justification": {
+    "name": "0068-text-justification"
+  },
+  "0097-interleaving-string": {
+    "name": "0097-interleaving-string"
+  },
+  "0074-search-a-2d-matrix": {
+    "name": "0074-search-a-2d-matrix"
+  },
+  "0085-maximal-rectangle": {
+    "name": "0085-maximal-rectangle"
+  },
+  "0086-partition-list": {
+    "name": "0086-partition-list"
+  },
+  "0072-edit-distance": {
+    "name": "0072-edit-distance"
+  },
+  "0082-remove-duplicates-from-sorted-list-ii": {
+    "name": "0082-remove-duplicates-from-sorted-list-ii"
+  },
+  "0070-climbing-stairs": {
+    "name": "0070-climbing-stairs"
   }
 }
