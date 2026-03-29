@@ -23,6 +23,7 @@ topics = {
     "dp": "10-dynamic-programming",
     "dynamic": "10-dynamic-programming",
     "backtrack": "11-backtracking",
+    "nqueens": "11-backtracking",
     "combination": "11-backtracking",
     "permutation": "11-backtracking",
     "greedy": "12-greedy",
