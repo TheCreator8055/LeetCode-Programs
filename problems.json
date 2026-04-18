@@ -1,39 +1,48 @@
 {
   "0007-reverse-integer": {
-    "name": "0007-reverse-integer"
+    "name": "0007-reverse-integer",
+    "folder": "02-two-pointers"
   },
   "0018-4sum": {
-    "name": "0018-4sum"
+    "name": "0018-4sum",
+    "folder": "02-two-pointers"
   },
   "0009-palindrome-number": {
-    "name": "0009-palindrome-number"
+    "name": "0009-palindrome-number",
+    "folder": "02-two-pointers"
   },
   "0040-combination-sum-ii": {
-    "name": "0040-combination-sum-ii"
+    "name": "0040-combination-sum-ii",
+    "folder": "11-backtracking"
   },
   "0034-find-first-and-last-position-of-element-in-sorted-array": {
     "name": "0034-find-first-and-last-position-of-element-in-sorted-array"
   },
   "0045-jump-game-ii": {
-    "name": "0045-jump-game-ii"
+    "name": "0045-jump-game-ii",
+    "folder": "12-greedy"
   },
   "0019-remove-nth-node-from-end-of-list": {
     "name": "0019-remove-nth-node-from-end-of-list"
   },
   "0041-first-missing-positive": {
-    "name": "0041-first-missing-positive"
+    "name": "0041-first-missing-positive",
+    "folder": "01-arrays"
   },
   "0047-permutations-ii": {
-    "name": "0047-permutations-ii"
+    "name": "0047-permutations-ii",
+    "folder": "11-backtracking"
   },
   "0005-longest-palindromic-substring": {
     "name": "0005-longest-palindromic-substring"
   },
   "0014-longest-common-prefix": {
-    "name": "0014-longest-common-prefix"
+    "name": "0014-longest-common-prefix",
+    "folder": "15-strings"
   },
   "0037-sudoku-solver": {
-    "name": "0037-sudoku-solver"
+    "name": "0037-sudoku-solver",
+    "folder": "09-graphs"
   },
   "0028-find-the-index-of-the-first-occurrence-in-a-string": {
     "name": "0028-find-the-index-of-the-first-occurrence-in-a-string"
@@ -42,28 +51,35 @@
     "name": "0001-two-sum"
   },
   "0016-3sum-closest": {
-    "name": "0016-3sum-closest"
+    "name": "0016-3sum-closest",
+    "folder": "02-two-pointers"
   },
   "0020-valid-parentheses": {
-    "name": "0020-valid-parentheses"
+    "name": "0020-valid-parentheses",
+    "folder": "04-stack"
   },
   "0024-swap-nodes-in-pairs": {
-    "name": "0024-swap-nodes-in-pairs"
+    "name": "0024-swap-nodes-in-pairs",
+    "folder": "02-two-pointers"
   },
   "0021-merge-two-sorted-lists": {
     "name": "0021-merge-two-sorted-lists"
   },
   "0015-3sum": {
-    "name": "0015-3sum"
+    "name": "0015-3sum",
+    "folder": "02-two-pointers"
   },
   "0044-wildcard-matching": {
-    "name": "0044-wildcard-matching"
+    "name": "0044-wildcard-matching",
+    "folder": "10-dynamic-programming"
   },
   "0013-roman-to-integer": {
-    "name": "0013-roman-to-integer"
+    "name": "0013-roman-to-integer",
+    "folder": "13-math"
   },
   "0027-remove-element": {
-    "name": "0027-remove-element"
+    "name": "0027-remove-element",
+    "folder": "01-arrays"
   },
   "0030-substring-with-concatenation-of-all-words": {
     "name": "0030-substring-with-concatenation-of-all-words"
@@ -72,10 +88,12 @@
     "name": "0008-string-to-integer-atoi"
   },
   "0049-group-anagrams": {
-    "name": "0049-group-anagrams"
+    "name": "0049-group-anagrams",
+    "folder": "15-strings"
   },
   "0006-zigzag-conversion": {
-    "name": "0006-zigzag-conversion"
+    "name": "0006-zigzag-conversion",
+    "folder": "03-sliding-window"
   },
   "0026-remove-duplicates-from-sorted-array": {
     "name": "0026-remove-duplicates-from-sorted-array"
@@ -96,61 +114,76 @@
     "name": "0035-search-insert-position"
   },
   "0011-container-with-most-water": {
-    "name": "0011-container-with-most-water"
+    "name": "0011-container-with-most-water",
+    "folder": "01-arrays"
   },
   "0048-rotate-image": {
-    "name": "0048-rotate-image"
+    "name": "0048-rotate-image",
+    "folder": "01-arrays"
   },
   "0167-two-sum-ii---input-array-is-sorted": {
     "name": "0167-two-sum-ii---input-array-is-sorted"
   },
   "0042-trapping-rain-water": {
-    "name": "0042-trapping-rain-water"
+    "name": "0042-trapping-rain-water",
+    "folder": "01-arrays"
   },
   "0029-divide-two-integers": {
     "name": "0029-divide-two-integers"
   },
   "0017-letter-combinations-of-a-phone-number": {
-    "name": "0017-letter-combinations-of-a-phone-number"
+    "name": "0017-letter-combinations-of-a-phone-number",
+    "folder": "11-backtracking"
   },
   "0031-next-permutation": {
-    "name": "0031-next-permutation"
+    "name": "0031-next-permutation",
+    "folder": "11-backtracking"
   },
   "0010-regular-expression-matching": {
-    "name": "0010-regular-expression-matching"
+    "name": "0010-regular-expression-matching",
+    "folder": "10-dynamic-programming"
   },
   "0043-multiply-strings": {
     "name": "0043-multiply-strings"
   },
   "0022-generate-parentheses": {
-    "name": "0022-generate-parentheses"
+    "name": "0022-generate-parentheses",
+    "folder": "04-stack"
   },
   "0039-combination-sum": {
-    "name": "0039-combination-sum"
+    "name": "0039-combination-sum",
+    "folder": "11-backtracking"
   },
   "0012-integer-to-roman": {
-    "name": "0012-integer-to-roman"
+    "name": "0012-integer-to-roman",
+    "folder": "13-math"
   },
   "0046-permutations": {
-    "name": "0046-permutations"
+    "name": "0046-permutations",
+    "folder": "11-backtracking"
   },
   "0025-reverse-nodes-in-k-group": {
-    "name": "0025-reverse-nodes-in-k-group"
+    "name": "0025-reverse-nodes-in-k-group",
+    "folder": "02-two-pointers"
   },
   "0032-longest-valid-parentheses": {
-    "name": "0032-longest-valid-parentheses"
+    "name": "0032-longest-valid-parentheses",
+    "folder": "04-stack"
   },
   "0036-valid-sudoku": {
-    "name": "0036-valid-sudoku"
+    "name": "0036-valid-sudoku",
+    "folder": "09-graphs"
   },
   "0004-median-of-two-sorted-arrays": {
     "name": "0004-median-of-two-sorted-arrays"
   },
   "0050-powx-n": {
-    "name": "0050-powx-n"
+    "name": "0050-powx-n",
+    "folder": "13-math"
   },
   "0038-count-and-say": {
-    "name": "0038-count-and-say"
+    "name": "0038-count-and-say",
+    "folder": "13-math"
   },
   "0033-search-in-rotated-sorted-array": {
     "name": "0033-search-in-rotated-sorted-array"
@@ -162,7 +195,8 @@
     "name": "0060-permutation-sequence"
   },
   "0058-length-of-last-word": {
-    "name": "0058-length-of-last-word"
+    "name": "0058-length-of-last-word",
+    "folder": "15-strings"
   },
   "0088-merge-sorted-array": {
     "name": "0088-merge-sorted-array"
@@ -180,10 +214,12 @@
     "name": "0098-validate-binary-search-tree"
   },
   "0084-largest-rectangle-in-histogram": {
-    "name": "0084-largest-rectangle-in-histogram"
+    "name": "0084-largest-rectangle-in-histogram",
+    "folder": "04-stack"
   },
   "0067-add-binary": {
-    "name": "0067-add-binary"
+    "name": "0067-add-binary",
+    "folder": "05-binary-search"
   },
   "0095-unique-binary-search-trees-ii": {
     "name": "0095-unique-binary-search-trees-ii"
@@ -201,7 +237,8 @@
     "name": "0075-sort-colors"
   },
   "0055-jump-game": {
-    "name": "0055-jump-game"
+    "name": "0055-jump-game",
+    "folder": "12-greedy"
   },
   "0077-combinations": {
     "name": "0077-combinations"
@@ -225,7 +262,8 @@
     "name": "0096-unique-binary-search-trees"
   },
   "0089-gray-code": {
-    "name": "0089-gray-code"
+    "name": "0089-gray-code",
+    "folder": "11-backtracking"
   },
   "0090-subsets-ii": {
     "name": "0090-subsets-ii"
@@ -234,7 +272,8 @@
     "name": "0079-word-search"
   },
   "0093-restore-ip-addresses": {
-    "name": "0093-restore-ip-addresses"
+    "name": "0093-restore-ip-addresses",
+    "folder": "11-backtracking"
   },
   "0100-same-tree": {
     "name": "0100-same-tree"
@@ -243,13 +282,16 @@
     "name": "0061-rotate-list"
   },
   "0071-simplify-path": {
-    "name": "0071-simplify-path"
+    "name": "0071-simplify-path",
+    "folder": "04-stack"
   },
   "0051-n-queens": {
-    "name": "0051-n-queens"
+    "name": "0051-n-queens",
+    "folder": "11-backtracking"
   },
   "0063-unique-paths-ii": {
-    "name": "0063-unique-paths-ii"
+    "name": "0063-unique-paths-ii",
+    "folder": "10-dynamic-programming"
   },
   "0080-remove-duplicates-from-sorted-array-ii": {
     "name": "0080-remove-duplicates-from-sorted-array-ii"
@@ -270,16 +312,20 @@
     "name": "0094-binary-tree-inorder-traversal"
   },
   "0062-unique-paths": {
-    "name": "0062-unique-paths"
+    "name": "0062-unique-paths",
+    "folder": "10-dynamic-programming"
   },
   "0091-decode-ways": {
-    "name": "0091-decode-ways"
+    "name": "0091-decode-ways",
+    "folder": "10-dynamic-programming"
   },
   "0052-n-queens-ii": {
-    "name": "0052-n-queens-ii"
+    "name": "0052-n-queens-ii",
+    "folder": "11-backtracking"
   },
   "0068-text-justification": {
-    "name": "0068-text-justification"
+    "name": "0068-text-justification",
+    "folder": "12-greedy"
   },
   "0097-interleaving-string": {
     "name": "0097-interleaving-string"
@@ -288,18 +334,21 @@
     "name": "0074-search-a-2d-matrix"
   },
   "0085-maximal-rectangle": {
-    "name": "0085-maximal-rectangle"
+    "name": "0085-maximal-rectangle",
+    "folder": "01-arrays"
   },
   "0086-partition-list": {
     "name": "0086-partition-list"
   },
   "0072-edit-distance": {
-    "name": "0072-edit-distance"
+    "name": "0072-edit-distance",
+    "folder": "10-dynamic-programming"
   },
   "0082-remove-duplicates-from-sorted-list-ii": {
     "name": "0082-remove-duplicates-from-sorted-list-ii"
   },
   "0070-climbing-stairs": {
-    "name": "0070-climbing-stairs"
+    "name": "0070-climbing-stairs",
+    "folder": "10-dynamic-programming"
   }
 }
