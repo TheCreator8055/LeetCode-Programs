@@ -28,6 +28,8 @@ jobs:
         run: pip install requests
 
       - name: Organize problems
+        env:
+            ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python .github/scripts/organize.py
 
       - name: Update README
