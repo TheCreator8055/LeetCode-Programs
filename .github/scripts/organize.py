@@ -1,8 +1,8 @@
 import os
 import shutil
 import json
+import re
 import urllib.request
-import urllib.error
 
 # ─────────────────────────────────────────────
 # Topic keyword map  (keyword → folder)
@@ -18,32 +18,33 @@ topics = {
     "majority": "01-arrays",
     "missing": "01-arrays",
     "container": "01-arrays",
-    "trap": "01-arrays",           # trapping rain water
+    "trap": "01-arrays",
     "product": "01-arrays",
     "merge": "01-arrays",
+    "image": "01-arrays",
+    "maximal": "01-arrays",
 
     # Two Pointers
-    "two": "02-two-pointers",
-    "threesum": "02-two-pointers",
+    "3sum": "02-two-pointers",
+    "4sum": "02-two-pointers",
+    "closest": "02-two-pointers",
     "palindrome": "02-two-pointers",
     "reverse": "02-two-pointers",
+    "swap": "02-two-pointers",
 
     # Sliding Window
     "window": "03-sliding-window",
     "zigzag": "03-sliding-window",
     "substring": "03-sliding-window",
     "subarray": "03-sliding-window",
-    "maximum": "03-sliding-window",
 
     # Stack
     "stack": "04-stack",
     "parentheses": "04-stack",
     "bracket": "04-stack",
-    "valid": "04-stack",
-    "decode": "04-stack",
     "calculator": "04-stack",
-    "temperature": "04-stack",
     "histogram": "04-stack",
+    "simplify": "04-stack",
 
     # Binary Search
     "search": "05-binary-search",
@@ -53,9 +54,8 @@ topics = {
     "median": "05-binary-search",
 
     # Linked List
-    "list": "06-linked-list",
     "linked": "06-linked-list",
-    "node": "06-linked-list",
+    "nodes-in": "06-linked-list",
     "cycle": "06-linked-list",
     "lru": "06-linked-list",
 
@@ -65,25 +65,16 @@ topics = {
     "inorder": "07-trees",
     "preorder": "07-trees",
     "postorder": "07-trees",
-    "level": "07-trees",
     "diameter": "07-trees",
     "ancestor": "07-trees",
     "depth": "07-trees",
     "height": "07-trees",
-    "leaf": "07-trees",
-    "root": "07-trees",
     "symmetric": "07-trees",
-    "path": "07-trees",
 
-    # Heap / Priority Queue
+    # Heap
     "heap": "08-heap",
     "priority": "08-heap",
     "frequent": "08-heap",
-    "top_k": "08-heap",
-    "topk": "08-heap",
-    "largest": "08-heap",
-    "smallest": "08-heap",
-    "kth_largest": "08-heap",
 
     # Graphs
     "graph": "09-graphs",
@@ -93,12 +84,7 @@ topics = {
     "island": "09-graphs",
     "course": "09-graphs",
     "clone": "09-graphs",
-    "wall": "09-graphs",
     "pacific": "09-graphs",
-    "atlantic": "09-graphs",
-    "flood": "09-graphs",
-    "word_ladder": "09-graphs",
-    "wordladder": "09-graphs",
     "network": "09-graphs",
     "rotten": "09-graphs",
 
@@ -106,145 +92,100 @@ topics = {
     "dp": "10-dynamic-programming",
     "dynamic": "10-dynamic-programming",
     "fibonacci": "10-dynamic-programming",
-    "climb": "10-dynamic-programming",
+    "climbing": "10-dynamic-programming",
     "coin": "10-dynamic-programming",
     "knapsack": "10-dynamic-programming",
-    "longest": "10-dynamic-programming",
     "subsequence": "10-dynamic-programming",
-    "edit": "10-dynamic-programming",
+    "edit-distance": "10-dynamic-programming",
     "triangle": "10-dynamic-programming",
     "house": "10-dynamic-programming",
-    "jump": "10-dynamic-programming",
     "decode": "10-dynamic-programming",
     "partition": "10-dynamic-programming",
-    "paint": "10-dynamic-programming",
     "dungeon": "10-dynamic-programming",
-    "unique": "10-dynamic-programming",
+    "unique-path": "10-dynamic-programming",
+    "wildcard": "10-dynamic-programming",
+    "regular-expression": "10-dynamic-programming",
 
     # Backtracking
-    "backtrack": "11-backtracking",
-    "nqueens": "11-backtracking",
+    "n-queens": "11-backtracking",
     "combination": "11-backtracking",
     "permutation": "11-backtracking",
+    "permutations": "11-backtracking",
     "subset": "11-backtracking",
-    "letter": "11-backtracking",
-    "phone": "11-backtracking",
-    "generate": "11-backtracking",
-    "wordSearch": "11-backtracking",
-    "wordsearch": "11-backtracking",
+    "letter-combination": "11-backtracking",
+    "generate-parentheses": "11-backtracking",
+    "gray-code": "11-backtracking",
+    "word-search": "11-backtracking",
+    "restore-ip": "11-backtracking",
 
     # Greedy
     "greedy": "12-greedy",
     "gas": "12-greedy",
-    "assign": "12-greedy",
     "candy": "12-greedy",
-    "task": "12-greedy",
-    "schedule": "12-greedy",
+    "jump-game": "12-greedy",
+    "text-justification": "12-greedy",
 
     # Math
-    "math": "13-math",
-    "integer": "13-math",
-    "number": "13-math",
+    "integer-to": "13-math",
+    "to-integer": "13-math",
     "roman": "13-math",
-    "pow": "13-math",
+    "powx": "13-math",
     "sqrt": "13-math",
     "divide": "13-math",
     "multiply": "13-math",
-    "plus": "13-math",
     "prime": "13-math",
-    "factorial": "13-math",
-    "palindrome_num": "13-math",
-    "excel": "13-math",
-    "happy": "13-math",
-    "bulb": "13-math",
-    "digit": "13-math",
-    "count_primes": "13-math",
-    "countprimes": "13-math",
+    "add-binary": "13-math",
+    "count-and-say": "13-math",
+    "missing-positive": "13-math",
 
     # Bit Manipulation
     "bit": "14-bit-manipulation",
     "xor": "14-bit-manipulation",
-    "bitwise": "14-bit-manipulation",
     "hamming": "14-bit-manipulation",
-    "power_of_two": "14-bit-manipulation",
-    "poweroftwo": "14-bit-manipulation",
-    "single_number": "14-bit-manipulation",
-    "singlenumber": "14-bit-manipulation",
-    "counting_bits": "14-bit-manipulation",
-    "countingbits": "14-bit-manipulation",
+    "single-number": "14-bit-manipulation",
 
     # Strings
     "string": "15-strings",
     "anagram": "15-strings",
-    "prefix": "15-strings",
+    "common-prefix": "15-strings",
     "strstr": "15-strings",
     "atoi": "15-strings",
     "compress": "15-strings",
-    "group": "15-strings",
     "isomorphic": "15-strings",
-    "longest_common": "15-strings",
-    "longestcommon": "15-strings",
-    "word": "15-strings",
-    "sentence": "15-strings",
-    "title": "15-strings",
-    "zigzag_conversion": "15-strings",
-    "zigzagconversion": "15-strings",
-
-    # Misc stays as fallback
-    # (16-misc handled below)
+    "last-word": "15-strings",
+    "valid-anagram": "15-strings",
+    "count-and": "15-strings",
 
     # Hash Table
     "hash": "17-hash-table",
-    "hashmap": "17-hash-table",
-    "map": "17-hash-table",
-    "two_sum": "17-hash-table",
-    "twosum": "17-hash-table",
+    "two-sum": "17-hash-table",
     "contains": "17-hash-table",
 
     # Prefix Sum
-    "prefix_sum": "18-prefix-sum",
-    "prefixsum": "18-prefix-sum",
-    "range_sum": "18-prefix-sum",
-    "rangesum": "18-prefix-sum",
-    "subarray_sum": "18-prefix-sum",
-    "subarraysum": "18-prefix-sum",
+    "prefix-sum": "18-prefix-sum",
+    "range-sum": "18-prefix-sum",
 
     # Intervals
     "interval": "19-intervals",
     "meeting": "19-intervals",
-    "insert": "19-intervals",
-    "non_overlapping": "19-intervals",
-    "nonoverlapping": "19-intervals",
+    "non-overlapping": "19-intervals",
 
     # Sorting
     "sort": "20-sorting",
-    "quick": "20-sorting",
-    "merge_sort": "20-sorting",
-    "mergesort": "20-sorting",
-    "bubble": "20-sorting",
-    "counting_sort": "20-sorting",
-    "countingsort": "20-sorting",
+    "next-permutation": "20-sorting",
 
     # Union Find
     "union": "21-union-find",
-    "disjoint": "21-union-find",
     "connected": "21-union-find",
-    "component": "21-union-find",
     "redundant": "21-union-find",
     "accounts": "21-union-find",
 
     # Trie
     "trie": "22-trie",
-    "prefix_tree": "22-trie",
-    "prefixtree": "22-trie",
-    "implement_trie": "22-trie",
-    "implementtrie": "22-trie",
 
     # Queue
     "queue": "23-queue",
     "deque": "23-queue",
-    "moving_average": "23-queue",
-    "movingaverage": "23-queue",
 }
 
 FOLDER_LABELS = {
@@ -274,41 +215,42 @@ FOLDER_LABELS = {
 }
 
 IGNORE = {
-    ".git",
-    ".github",
-    "organize.py",
-    "update_readme.py",
-    "fetch_leetcode.py",
-    "README.md",
-    "problems.json",
+    ".git", ".github",
+    "organize.py", "update_readme.py", "fetch_leetcode.py",
+    "README.md", "problems.json",
 }
 
 topics_folders = set(topics.values())
 topics_folders.add("16-misc")
 
 
-# ─────────────────────────────────────────────
-# Claude AI classifier (called only for unmatched problems)
-# ─────────────────────────────────────────────
+def normalize(name: str) -> str:
+    """Strip leading problem number: '0042-trapping-rain-water' → 'trapping-rain-water'"""
+    return re.sub(r"^\d+-", "", name.lower())
+
+
+def keyword_classify(name: str):
+    clean = normalize(name)
+    for key, folder in topics.items():
+        if key in clean:
+            return folder
+    return None
+
 
 def classify_with_claude(problem_name: str) -> str:
-    """
-    Ask Claude to classify a LeetCode problem name into a DSA topic folder.
-    Returns a folder string like '07-trees', or '16-misc' on failure.
-    """
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not api_key:
-        print(f"  [AI] No ANTHROPIC_API_KEY found — skipping AI classification for '{problem_name}'")
+        print(f"  [AI] No ANTHROPIC_API_KEY — skipping '{problem_name}'")
         return "16-misc"
 
     folder_list = "\n".join(f"  {k}: {v}" for k, v in FOLDER_LABELS.items())
+    clean_name = normalize(problem_name).replace("-", " ")
     prompt = (
-        f"You are a DSA (Data Structures & Algorithms) expert.\n"
-        f"Given the LeetCode problem folder name below, return ONLY the single best matching "
-        f"category key from the list. Nothing else — just the key.\n\n"
-        f"Problem folder name: {problem_name}\n\n"
-        f"Available categories:\n{folder_list}\n\n"
-        f"Reply with only the category key (e.g. '07-trees')."
+        f"You are a DSA expert. Classify this LeetCode problem into exactly one category.\n"
+        f"Return ONLY the category key, nothing else.\n\n"
+        f"Problem: {clean_name}\n\n"
+        f"Categories:\n{folder_list}\n\n"
+        f"Reply with only the key (e.g. '07-trees')."
     )
 
     payload = json.dumps({
@@ -327,7 +269,6 @@ def classify_with_claude(problem_name: str) -> str:
         },
         method="POST",
     )
-
     try:
         with urllib.request.urlopen(req, timeout=15) as resp:
             data = json.loads(resp.read().decode("utf-8"))
@@ -335,60 +276,64 @@ def classify_with_claude(problem_name: str) -> str:
             if answer in topics_folders:
                 print(f"  [AI] '{problem_name}' → {answer}")
                 return answer
-            else:
-                print(f"  [AI] Unexpected answer '{answer}' for '{problem_name}' — using 16-misc")
-                return "16-misc"
+            print(f"  [AI] Unexpected answer '{answer}' for '{problem_name}' → 16-misc")
+            return "16-misc"
     except Exception as e:
-        print(f"  [AI] API error for '{problem_name}': {e} — using 16-misc")
+        print(f"  [AI] Error for '{problem_name}': {e} → 16-misc")
         return "16-misc"
 
 
-# ─────────────────────────────────────────────
-# Main organiser logic
-# ─────────────────────────────────────────────
+def move_to(item_path: str, item_name: str, target_folder: str):
+    os.makedirs(target_folder, exist_ok=True)
+    dest = os.path.join(target_folder, item_name)
+    if not os.path.exists(dest):
+        shutil.move(item_path, dest)
+    print(f"  Moved '{item_name}' → {target_folder}/")
 
+
+def process_item(item_name: str, item_path: str, metadata: dict):
+    folder = keyword_classify(item_name)
+    if folder is None:
+        print(f"No keyword match for '{item_name}' — asking Claude AI...")
+        folder = classify_with_claude(item_name)
+    if folder != "16-misc":
+        move_to(item_path, item_name, folder)
+    metadata[item_name] = {"name": item_name, "folder": folder}
+
+
+# ── Load metadata ──────────────────────────────────────────────────────────────
 metadata_file = "problems.json"
+metadata = {}
 if os.path.exists(metadata_file):
     with open(metadata_file, "r", encoding="utf-8") as f:
         metadata = json.load(f)
-else:
-    metadata = {}
 
-items = os.listdir(".")
-
-for item in items:
-    if item in IGNORE:
-        continue
-    if item in topics_folders:
-        continue
-    if item.startswith("."):
+# ── PASS 1: root — new problems from leetcode-sync ────────────────────────────
+print("\n=== PASS 1: scanning root ===")
+for item in sorted(os.listdir(".")):
+    if item in IGNORE or item in topics_folders or item.startswith("."):
         continue
     if not os.path.isdir(item):
         continue
+    process_item(item, item, metadata)
 
-    lower = item.lower().replace("-", "_").replace(" ", "_")
+# ── PASS 2: rescan 16-misc — reclassify everything already stuck there ────────
+misc_dir = "16-misc"
+if os.path.isdir(misc_dir):
+    print("\n=== PASS 2: rescanning 16-misc ===")
+    for item in sorted(os.listdir(misc_dir)):
+        item_path = os.path.join(misc_dir, item)
+        if not os.path.isdir(item_path):
+            continue
+        folder = keyword_classify(item)
+        if folder is None:
+            print(f"No keyword match for '{item}' — asking Claude AI...")
+            folder = classify_with_claude(item)
+        if folder != "16-misc":
+            move_to(item_path, item, folder)
+        metadata[item] = {"name": item, "folder": folder}
 
-    # ── 1. Keyword match (fast, free) ──────────────────────────────
-    folder = None
-    for key, dest_folder in topics.items():
-        if key in lower:
-            folder = dest_folder
-            break
-
-    # ── 2. Claude AI fallback (only when keyword match fails) ──────
-    if folder is None:
-        print(f"No keyword match for '{item}' — asking Claude AI...")
-        folder = classify_with_claude(item)
-
-    # ── 3. Move ────────────────────────────────────────────────────
-    os.makedirs(folder, exist_ok=True)
-    dest = os.path.join(folder, item)
-    if not os.path.exists(dest):
-        shutil.move(item, dest)
-        print(f"Moved '{item}' → {dest}")
-
-    metadata[item] = {"name": item, "folder": folder}
-
+# ── Save metadata ──────────────────────────────────────────────────────────────
 with open(metadata_file, "w", encoding="utf-8") as f:
     json.dump(metadata, f, indent=2)
 
