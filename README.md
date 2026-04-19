@@ -21,7 +21,6 @@ Automatically synced solutions from LeetCode.
 | 12-greedy | 3 |
 | 13-math | 7 |
 | 15-strings | 12 |
-| 16-misc | 0 |
 
 
 ---
