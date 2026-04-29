@@ -350,5 +350,9 @@
   "0070-climbing-stairs": {
     "name": "0070-climbing-stairs",
     "folder": "10-dynamic-programming"
+  },
+  "0101-symmetric-tree": {
+    "name": "0101-symmetric-tree",
+    "folder": "07-trees"
   }
 }

@@ -4,7 +4,7 @@ Automatically synced solutions from LeetCode.
 
 ## 📊 Statistics
 
-**Total Problems Solved: 96**
+**Total Problems Solved: 97**
 
 | Topic | Problems |
 |------|------|
@@ -14,7 +14,7 @@ Automatically synced solutions from LeetCode.
 | 04-stack | 5 |
 | 05-binary-search | 7 |
 | 06-linked-list | 4 |
-| 07-trees | 2 |
+| 07-trees | 3 |
 | 09-graphs | 2 |
 | 10-dynamic-programming | 7 |
 | 11-backtracking | 12 |
@@ -81,6 +81,7 @@ Automatically synced solutions from LeetCode.
 | 0092 | [Reverse Linked List Ii](https://leetcode.com/problems/reverse-linked-list-ii/) | 06-linked-list |
 | 0086 | [Partition List](https://leetcode.com/problems/partition-list/) | 06-linked-list |
 | 0094 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | 07-trees |
+| 0101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | 07-trees |
 | 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | 07-trees |
 | 0037 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | 09-graphs |
 | 0036 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | 09-graphs |
