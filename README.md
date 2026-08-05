@@ -6,6 +6,9 @@ Automatically synced solutions from LeetCode.
 
 **Total Problems Solved: 121**
 
+![LeetCode Progress Chart](https://quickchart.io{type:%27doughnut%27,data:{labels:[%27Arrays%27,%27Two%20Pointers%27,%27Sliding%20Window%27,%27Stack%27,%27Binary%20Search%27,%27Linked%20List%27,%27Trees%27,%27Graphs%27,%27DP%27,%27Backtracking%27,%27Greedy%27,%27Math%27,%27Strings%27],datasets:[{data:[26,15,2,5,17,4,5,2,11,12,3,7,12],backgroundColor:[%27%23ff6384%27,%27%2336a2eb%27,%27%23ffce56%27,%27%234bc0c0%27,%27%239966ff%27,%27%23ff9f40%27,%27%23607d8b%27,%27%238bc34a%27,%27%23e91e63%27,%27%239c27b0%27,%27%2300bcd4%27,%27%23ff5722%27,%27%23795548%27]}]}})
+
+
 | Topic | Problems |
 |------|------|
 | 01-arrays | 26 |
