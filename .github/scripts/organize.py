@@ -70,6 +70,7 @@ topics = {
     "depth": "07-trees",
     "height": "07-trees",
     "symmetric": "07-trees",
+    "path-sum" : "07-trees",
 
     # Heap
     "heap": "08-heap",
