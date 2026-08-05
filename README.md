@@ -4,7 +4,7 @@ Automatically synced solutions from LeetCode.
 
 ## 📊 Statistics
 
-**Total Problems Solved: 114**
+**Total Problems Solved: 116**
 
 | Topic | Problems |
 |------|------|
@@ -14,7 +14,7 @@ Automatically synced solutions from LeetCode.
 | 04-stack | 5 |
 | 05-binary-search | 17 |
 | 06-linked-list | 4 |
-| 07-trees | 3 |
+| 07-trees | 5 |
 | 09-graphs | 2 |
 | 10-dynamic-programming | 11 |
 | 11-backtracking | 12 |
@@ -93,8 +93,10 @@ Automatically synced solutions from LeetCode.
 | 0086 | [Partition List](https://leetcode.com/problems/partition-list/) | 06-linked-list |
 | 0092 | [Reverse Linked List Ii](https://leetcode.com/problems/reverse-linked-list-ii/) | 06-linked-list |
 | 0019 | [Remove Nth Node From End Of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | 06-linked-list |
+| 0113 | [Path Sum Ii](https://leetcode.com/problems/path-sum-ii/) | 07-trees |
 | 0100 | [Same Tree](https://leetcode.com/problems/same-tree/) | 07-trees |
 | 0094 | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | 07-trees |
+| 0112 | [Path Sum](https://leetcode.com/problems/path-sum/) | 07-trees |
 | 0101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | 07-trees |
 | 0036 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | 09-graphs |
 | 0037 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | 09-graphs |

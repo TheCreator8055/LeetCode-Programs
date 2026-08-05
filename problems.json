@@ -397,11 +397,11 @@
   },
   "0112-path-sum": {
     "name": "0112-path-sum",
-    "folder": "16-misc"
+    "folder": "07-trees"
   },
   "0113-path-sum-ii": {
     "name": "0113-path-sum-ii",
-    "folder": "16-misc"
+    "folder": "07-trees"
   },
   "0114-flatten-binary-tree-to-linked-list": {
     "name": "0114-flatten-binary-tree-to-linked-list",
