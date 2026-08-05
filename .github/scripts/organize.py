@@ -7,6 +7,9 @@ import urllib.request
 # ─────────────────────────────────────────────
 # Topic keyword map  (keyword → folder)
 # ─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# Topic keyword map  (keyword → folder)
+# ─────────────────────────────────────────────
 topics = {
     # Arrays
     "array": "01-arrays",
@@ -23,6 +26,13 @@ topics = {
     "merge": "01-arrays",
     "image": "01-arrays",
     "maximal": "01-arrays",
+    "buy-sell-stock": "01-arrays",
+    "stock": "01-arrays",
+    "pascal": "01-arrays",
+    "vector": "01-arrays",
+    "submatrix": "01-arrays",
+    "diagonal": "01-arrays",
+    "element": "01-arrays",
 
     # Two Pointers
     "3sum": "02-two-pointers",
@@ -31,12 +41,16 @@ topics = {
     "palindrome": "02-two-pointers",
     "reverse": "02-two-pointers",
     "swap": "02-two-pointers",
+    "pointer": "02-two-pointers",
+    "two-sum-ii": "02-two-pointers",
+    "move-zeroes": "02-two-pointers",
 
     # Sliding Window
     "window": "03-sliding-window",
     "zigzag": "03-sliding-window",
     "substring": "03-sliding-window",
     "subarray": "03-sliding-window",
+    "consecutive": "03-sliding-window",
 
     # Stack
     "stack": "04-stack",
@@ -45,6 +59,9 @@ topics = {
     "calculator": "04-stack",
     "histogram": "04-stack",
     "simplify": "04-stack",
+    "monotonic": "04-stack",
+    "polish": "04-stack",
+    "rpn": "04-stack",
 
     # Binary Search
     "search": "05-binary-search",
@@ -52,12 +69,19 @@ topics = {
     "kth": "05-binary-search",
     "peak": "05-binary-search",
     "median": "05-binary-search",
+    "guess": "05-binary-search",
+    "rotated": "05-binary-search",
+    "bisect": "05-binary-search",
 
     # Linked List
     "linked": "06-linked-list",
     "nodes-in": "06-linked-list",
     "cycle": "06-linked-list",
     "lru": "06-linked-list",
+    "node": "06-linked-list",
+    "list": "06-linked-list",
+    "intersect": "06-linked-list",
+    "pointer-list": "06-linked-list",
 
     # Trees
     "tree": "07-trees",
@@ -70,12 +94,18 @@ topics = {
     "depth": "07-trees",
     "height": "07-trees",
     "symmetric": "07-trees",
-    "path-sum" : "07-trees",
+    "path-sum": "07-trees",
+    "level-order": "07-trees",
+    "leaf": "07-trees",
+    "invert": "07-trees",
+    "binary-tree": "07-trees",
 
     # Heap
     "heap": "08-heap",
     "priority": "08-heap",
     "frequent": "08-heap",
+    "top-k": "08-heap",
+    "k-closest": "08-heap",
 
     # Graphs
     "graph": "09-graphs",
@@ -88,6 +118,10 @@ topics = {
     "pacific": "09-graphs",
     "network": "09-graphs",
     "rotten": "09-graphs",
+    "path": "09-graphs",
+    "shortest": "09-graphs",
+    "dijkstra": "09-graphs",
+    "matrix-graph": "09-graphs",
 
     # Dynamic Programming
     "dp": "10-dynamic-programming",
@@ -106,6 +140,10 @@ topics = {
     "unique-path": "10-dynamic-programming",
     "wildcard": "10-dynamic-programming",
     "regular-expression": "10-dynamic-programming",
+    "lis": "10-dynamic-programming",
+    "lcs": "10-dynamic-programming",
+    "robber": "10-dynamic-programming",
+    "longest-common": "10-dynamic-programming",
 
     # Backtracking
     "n-queens": "11-backtracking",
@@ -118,6 +156,7 @@ topics = {
     "gray-code": "11-backtracking",
     "word-search": "11-backtracking",
     "restore-ip": "11-backtracking",
+    "sudoku-solver": "11-backtracking",
 
     # Greedy
     "greedy": "12-greedy",
@@ -125,6 +164,8 @@ topics = {
     "candy": "12-greedy",
     "jump-game": "12-greedy",
     "text-justification": "12-greedy",
+    "assign": "12-greedy",
+    "fractional": "12-greedy",
 
     # Math
     "integer-to": "13-math",
@@ -138,12 +179,18 @@ topics = {
     "add-binary": "13-math",
     "count-and-say": "13-math",
     "missing-positive": "13-math",
+    "gcd": "13-math",
+    "lcm": "13-math",
+    "factorial": "13-math",
+    "power": "13-math",
 
     # Bit Manipulation
     "bit": "14-bit-manipulation",
     "xor": "14-bit-manipulation",
     "hamming": "14-bit-manipulation",
     "single-number": "14-bit-manipulation",
+    "mask": "14-bit-manipulation",
+    "number-of-1-bits": "14-bit-manipulation",
 
     # Strings
     "string": "15-strings",
@@ -156,33 +203,44 @@ topics = {
     "last-word": "15-strings",
     "valid-anagram": "15-strings",
     "count-and": "15-strings",
+    "char": "15-strings",
+    "word": "15-strings",
 
     # Hash Table
     "hash": "17-hash-table",
     "two-sum": "17-hash-table",
     "contains": "17-hash-table",
+    "map": "17-hash-table",
+    "dict": "17-hash-table",
+    "frequency": "17-hash-table",
 
     # Prefix Sum
     "prefix-sum": "18-prefix-sum",
     "range-sum": "18-prefix-sum",
+    "running": "18-prefix-sum",
 
     # Intervals
     "interval": "19-intervals",
     "meeting": "19-intervals",
     "non-overlapping": "19-intervals",
+    "overlap": "19-intervals",
 
     # Sorting
     "sort": "20-sorting",
     "next-permutation": "20-sorting",
+    "quicksort": "20-sorting",
+    "mergesort": "20-sorting",
 
     # Union Find
     "union": "21-union-find",
     "connected": "21-union-find",
     "redundant": "21-union-find",
     "accounts": "21-union-find",
+    "disjoint": "21-union-find",
 
     # Trie
     "trie": "22-trie",
+    "prefix-tree": "22-trie",
 
     # Queue
     "queue": "23-queue",
@@ -213,6 +271,7 @@ FOLDER_LABELS = {
     "21-union-find": "Union Find",
     "22-trie": "Trie",
     "23-queue": "Queue",
+
 }
 
 IGNORE = {
