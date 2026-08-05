@@ -354,5 +354,101 @@
   "0101-symmetric-tree": {
     "name": "0101-symmetric-tree",
     "folder": "07-trees"
+  },
+  "0102-binary-tree-level-order-traversal": {
+    "name": "0102-binary-tree-level-order-traversal",
+    "folder": "05-binary-search"
+  },
+  "0103-binary-tree-zigzag-level-order-traversal": {
+    "name": "0103-binary-tree-zigzag-level-order-traversal",
+    "folder": "03-sliding-window"
+  },
+  "0104-maximum-depth-of-binary-tree": {
+    "name": "0104-maximum-depth-of-binary-tree",
+    "folder": "05-binary-search"
+  },
+  "0105-construct-binary-tree-from-preorder-and-inorder-traversal": {
+    "name": "0105-construct-binary-tree-from-preorder-and-inorder-traversal",
+    "folder": "05-binary-search"
+  },
+  "0106-construct-binary-tree-from-inorder-and-postorder-traversal": {
+    "name": "0106-construct-binary-tree-from-inorder-and-postorder-traversal",
+    "folder": "05-binary-search"
+  },
+  "0107-binary-tree-level-order-traversal-ii": {
+    "name": "0107-binary-tree-level-order-traversal-ii",
+    "folder": "05-binary-search"
+  },
+  "0108-convert-sorted-array-to-binary-search-tree": {
+    "name": "0108-convert-sorted-array-to-binary-search-tree",
+    "folder": "01-arrays"
+  },
+  "0109-convert-sorted-list-to-binary-search-tree": {
+    "name": "0109-convert-sorted-list-to-binary-search-tree",
+    "folder": "05-binary-search"
+  },
+  "0110-balanced-binary-tree": {
+    "name": "0110-balanced-binary-tree",
+    "folder": "05-binary-search"
+  },
+  "0111-minimum-depth-of-binary-tree": {
+    "name": "0111-minimum-depth-of-binary-tree",
+    "folder": "05-binary-search"
+  },
+  "0112-path-sum": {
+    "name": "0112-path-sum",
+    "folder": "16-misc"
+  },
+  "0113-path-sum-ii": {
+    "name": "0113-path-sum-ii",
+    "folder": "16-misc"
+  },
+  "0114-flatten-binary-tree-to-linked-list": {
+    "name": "0114-flatten-binary-tree-to-linked-list",
+    "folder": "05-binary-search"
+  },
+  "0115-distinct-subsequences": {
+    "name": "0115-distinct-subsequences",
+    "folder": "10-dynamic-programming"
+  },
+  "0116-populating-next-right-pointers-in-each-node": {
+    "name": "0116-populating-next-right-pointers-in-each-node",
+    "folder": "16-misc"
+  },
+  "0117-populating-next-right-pointers-in-each-node-ii": {
+    "name": "0117-populating-next-right-pointers-in-each-node-ii",
+    "folder": "16-misc"
+  },
+  "0118-pascals-triangle": {
+    "name": "0118-pascals-triangle",
+    "folder": "10-dynamic-programming"
+  },
+  "0119-pascals-triangle-ii": {
+    "name": "0119-pascals-triangle-ii",
+    "folder": "10-dynamic-programming"
+  },
+  "0120-triangle": {
+    "name": "0120-triangle",
+    "folder": "10-dynamic-programming"
+  },
+  "0121-best-time-to-buy-and-sell-stock": {
+    "name": "0121-best-time-to-buy-and-sell-stock",
+    "folder": "16-misc"
+  },
+  "0122-best-time-to-buy-and-sell-stock-ii": {
+    "name": "0122-best-time-to-buy-and-sell-stock-ii",
+    "folder": "16-misc"
+  },
+  "0123-best-time-to-buy-and-sell-stock-iii": {
+    "name": "0123-best-time-to-buy-and-sell-stock-iii",
+    "folder": "16-misc"
+  },
+  "0124-binary-tree-maximum-path-sum": {
+    "name": "0124-binary-tree-maximum-path-sum",
+    "folder": "05-binary-search"
+  },
+  "0125-valid-palindrome": {
+    "name": "0125-valid-palindrome",
+    "folder": "02-two-pointers"
   }
 }

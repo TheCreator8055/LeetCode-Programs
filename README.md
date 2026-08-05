@@ -4,19 +4,19 @@ Automatically synced solutions from LeetCode.
 
 ## 📊 Statistics
 
-**Total Problems Solved: 97**
+**Total Problems Solved: 114**
 
 | Topic | Problems |
 |------|------|
-| 01-arrays | 22 |
-| 02-two-pointers | 12 |
-| 03-sliding-window | 1 |
+| 01-arrays | 23 |
+| 02-two-pointers | 13 |
+| 03-sliding-window | 2 |
 | 04-stack | 5 |
-| 05-binary-search | 7 |
+| 05-binary-search | 17 |
 | 06-linked-list | 4 |
 | 07-trees | 3 |
 | 09-graphs | 2 |
-| 10-dynamic-programming | 7 |
+| 10-dynamic-programming | 11 |
 | 11-backtracking | 12 |
 | 12-greedy | 3 |
 | 13-math | 7 |
@@ -33,6 +33,7 @@ Automatically synced solutions from LeetCode.
 | 0033 | [Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | 01-arrays |
 | 0054 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | 01-arrays |
 | 0004 | [Median Of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | 01-arrays |
+| 0108 | [Convert Sorted Array To Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | 01-arrays |
 | 0088 | [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/) | 01-arrays |
 | 0034 | [Find First And Last Position Of Element In Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | 01-arrays |
 | 0026 | [Remove Duplicates From Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 01-arrays |
@@ -51,6 +52,7 @@ Automatically synced solutions from LeetCode.
 | 0042 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 01-arrays |
 | 0059 | [Spiral Matrix Ii](https://leetcode.com/problems/spiral-matrix-ii/) | 01-arrays |
 | 0081 | [Search In Rotated Sorted Array Ii](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) | 01-arrays |
+| 0125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 02-two-pointers |
 | 0002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | 02-two-pointers |
 | 0025 | [Reverse Nodes In K Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 02-two-pointers |
 | 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | 02-two-pointers |
@@ -64,6 +66,7 @@ Automatically synced solutions from LeetCode.
 | 0001 | [Two Sum](https://leetcode.com/problems/two-sum/) | 02-two-pointers |
 | 0007 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | 02-two-pointers |
 | 0006 | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | 03-sliding-window |
+| 0103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | 03-sliding-window |
 | 0084 | [Largest Rectangle In Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | 04-stack |
 | 0022 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | 04-stack |
 | 0020 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 04-stack |
@@ -71,11 +74,21 @@ Automatically synced solutions from LeetCode.
 | 0071 | [Simplify Path](https://leetcode.com/problems/simplify-path/) | 04-stack |
 | 0095 | [Unique Binary Search Trees Ii](https://leetcode.com/problems/unique-binary-search-trees-ii/) | 05-binary-search |
 | 0099 | [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/) | 05-binary-search |
+| 0106 | [Construct Binary Tree From Inorder And Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) | 05-binary-search |
+| 0105 | [Construct Binary Tree From Preorder And Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | 05-binary-search |
+| 0107 | [Binary Tree Level Order Traversal Ii](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) | 05-binary-search |
+| 0102 | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | 05-binary-search |
 | 0098 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | 05-binary-search |
+| 0110 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | 05-binary-search |
+| 0109 | [Convert Sorted List To Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/) | 05-binary-search |
 | 0035 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | 05-binary-search |
+| 0124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | 05-binary-search |
 | 0096 | [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/) | 05-binary-search |
+| 0104 | [Maximum Depth Of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | 05-binary-search |
+| 0111 | [Minimum Depth Of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | 05-binary-search |
 | 0079 | [Word Search](https://leetcode.com/problems/word-search/) | 05-binary-search |
 | 0067 | [Add Binary](https://leetcode.com/problems/add-binary/) | 05-binary-search |
+| 0114 | [Flatten Binary Tree To Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | 05-binary-search |
 | 0023 | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | 06-linked-list |
 | 0086 | [Partition List](https://leetcode.com/problems/partition-list/) | 06-linked-list |
 | 0092 | [Reverse Linked List Ii](https://leetcode.com/problems/reverse-linked-list-ii/) | 06-linked-list |
@@ -85,11 +98,15 @@ Automatically synced solutions from LeetCode.
 | 0101 | [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/) | 07-trees |
 | 0036 | [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/) | 09-graphs |
 | 0037 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | 09-graphs |
+| 0118 | [Pascals Triangle](https://leetcode.com/problems/pascals-triangle/) | 10-dynamic-programming |
+| 0115 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | 10-dynamic-programming |
 | 0062 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | 10-dynamic-programming |
 | 0010 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | 10-dynamic-programming |
 | 0072 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | 10-dynamic-programming |
 | 0063 | [Unique Paths Ii](https://leetcode.com/problems/unique-paths-ii/) | 10-dynamic-programming |
 | 0091 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | 10-dynamic-programming |
+| 0120 | [Triangle](https://leetcode.com/problems/triangle/) | 10-dynamic-programming |
+| 0119 | [Pascals Triangle Ii](https://leetcode.com/problems/pascals-triangle-ii/) | 10-dynamic-programming |
 | 0070 | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) | 10-dynamic-programming |
 | 0044 | [Wildcard Matching](https://leetcode.com/problems/wildcard-matching/) | 10-dynamic-programming |
 | 0040 | [Combination Sum Ii](https://leetcode.com/problems/combination-sum-ii/) | 11-backtracking |
