@@ -413,11 +413,11 @@
   },
   "0116-populating-next-right-pointers-in-each-node": {
     "name": "0116-populating-next-right-pointers-in-each-node",
-    "folder": "16-misc"
+    "folder": "02-two-pointers"
   },
   "0117-populating-next-right-pointers-in-each-node-ii": {
     "name": "0117-populating-next-right-pointers-in-each-node-ii",
-    "folder": "16-misc"
+    "folder": "02-two-pointers"
   },
   "0118-pascals-triangle": {
     "name": "0118-pascals-triangle",
@@ -433,15 +433,15 @@
   },
   "0121-best-time-to-buy-and-sell-stock": {
     "name": "0121-best-time-to-buy-and-sell-stock",
-    "folder": "16-misc"
+    "folder": "01-arrays"
   },
   "0122-best-time-to-buy-and-sell-stock-ii": {
     "name": "0122-best-time-to-buy-and-sell-stock-ii",
-    "folder": "16-misc"
+    "folder": "01-arrays"
   },
   "0123-best-time-to-buy-and-sell-stock-iii": {
     "name": "0123-best-time-to-buy-and-sell-stock-iii",
-    "folder": "16-misc"
+    "folder": "01-arrays"
   },
   "0124-binary-tree-maximum-path-sum": {
     "name": "0124-binary-tree-maximum-path-sum",

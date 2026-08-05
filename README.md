@@ -4,12 +4,12 @@ Automatically synced solutions from LeetCode.
 
 ## 📊 Statistics
 
-**Total Problems Solved: 116**
+**Total Problems Solved: 121**
 
 | Topic | Problems |
 |------|------|
-| 01-arrays | 23 |
-| 02-two-pointers | 13 |
+| 01-arrays | 26 |
+| 02-two-pointers | 15 |
 | 03-sliding-window | 2 |
 | 04-stack | 5 |
 | 05-binary-search | 17 |
@@ -50,12 +50,17 @@ Automatically synced solutions from LeetCode.
 | 0061 | [Rotate List](https://leetcode.com/problems/rotate-list/) | 01-arrays |
 | 0041 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | 01-arrays |
 | 0042 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 01-arrays |
+| 0122 | [Best Time To Buy And Sell Stock Ii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) | 01-arrays |
+| 0121 | [Best Time To Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 01-arrays |
+| 0123 | [Best Time To Buy And Sell Stock Iii](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/) | 01-arrays |
 | 0059 | [Spiral Matrix Ii](https://leetcode.com/problems/spiral-matrix-ii/) | 01-arrays |
 | 0081 | [Search In Rotated Sorted Array Ii](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) | 01-arrays |
 | 0125 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 02-two-pointers |
 | 0002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | 02-two-pointers |
+| 0117 | [Populating Next Right Pointers In Each Node Ii](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/) | 02-two-pointers |
 | 0025 | [Reverse Nodes In K Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | 02-two-pointers |
 | 0009 | [Palindrome Number](https://leetcode.com/problems/palindrome-number/) | 02-two-pointers |
+| 0116 | [Populating Next Right Pointers In Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) | 02-two-pointers |
 | 0371 | [Sum Of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | 02-two-pointers |
 | 0015 | [3Sum](https://leetcode.com/problems/3sum/) | 02-two-pointers |
 | 0024 | [Swap Nodes In Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | 02-two-pointers |
