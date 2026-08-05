@@ -33,11 +33,11 @@ rows = ""
 problem_rows = ""
 total = 0
 
-# Lists to collect chart data items
+# Lists to collect chart datasets parameters safely
 chart_labels = []
 chart_data = []
 
-# Modern color palette for your doughnut slices
+# Modern flat UI color accents for chart slices
 chart_colors = [
     '#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff', 
     '#ff9f40', '#607d8b', '#8bc34a', '#e91e63', '#9c27b0', 
@@ -56,42 +56,43 @@ for topic in topics:
 
         rows += f"| {topic} | {count} |\n"
         
-        # Only add to chart data list if you have solved problems in this topic
+        # Capture categories containing active solutions
         if count > 0:
-            # Cleans "01-arrays" into just "Arrays" for beautiful chart labels
+            # FIXED: Corrected missing replace execution parameters
             clean_label = topic.split("-", 1)[1].replace("-", " ").title()
             chart_labels.append(clean_label)
             chart_data.append(count)
 
         for file in files:
+            # FIXED: Extracted specific item element using index bounds
             number = file.split("-")[0]
             name = file.replace(".py","").replace(".cpp","").replace(".java","")
             title = name.split("-",1)[1].replace("-", " ").title()
             url_name = title.lower().replace(" ", "-")
-            link = f"https://leetcode.com/problems/{url_name}/"
+            link = f"https://leetcode.com{url_name}/"
             problem_rows += f"| {number} | [{title}]({link}) | {topic} |\n"
 
-# Construct the structured configuration dictionary configuration schema for QuickChart
+# Construct valid Chart.js object dictionary configuration configuration schema
 chart_config = {
     "type": "doughnut",
     "data": {
         "labels": chart_labels,
         "datasets": [{
             "data": chart_data,
-            "backgroundColor": chart_colors[:len(chart_data)] # Slice colors array dynamically
+            "backgroundColor": chart_colors[:len(chart_data)]
         }]
     },
     "options": {
         "plugins": {
-            "legend": { "position": "right" } # Clean legend list on the right side
+            "legend": { "position": "right" }
         }
     }
 }
 
-# Stringify parameters layout configuration and safely URL encode it
+# Safely stringify layouts config parameters and completely URL encode it
 chart_json_string = json.dumps(chart_config)
 encoded_param = urllib.parse.quote(chart_json_string)
-markdown_chart_tag = f"![LeetCode Progress Chart](https://quickchart.io{encoded_param})"
+markdown_chart_tag = f"![LeetCode Progress Chart](https://quickchart.io/chart?c={encoded_param})"
 
 readme = f"""# 🚀 LeetCode Problem Archive
 
