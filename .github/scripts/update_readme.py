@@ -68,6 +68,8 @@ Automatically synced solutions from LeetCode.
 ## 📊 Statistics
 
 **Total Problems Solved: {total}**
+chart_url = f"https://quickchart.io{{type:'doughnut',data:{...}}}"
+
 
 | Topic | Problems |
 |------|------|
