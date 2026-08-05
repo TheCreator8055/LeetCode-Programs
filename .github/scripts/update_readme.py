@@ -73,6 +73,7 @@ for topic in topics:
             problem_rows += f"| {number} | [{title}]({link}) | {topic} |\n"
 
 # Construct valid Chart.js object dictionary configuration configuration schema
+# Construct valid Chart.js object dictionary configuration schema with enhanced data labels
 chart_config = {
     "type": "doughnut",
     "data": {
@@ -84,10 +85,26 @@ chart_config = {
     },
     "options": {
         "plugins": {
-            "legend": { "position": "right" }
+            "legend": {
+                "position": "top",
+                "labels": {
+                    "fontSize": 13,
+                    "fontStyle": "bold"
+                }
+            },
+            # FIX: Force text inside chart slices to be crisp, bold white
+            "datalabels": {
+                "color": "#ffffff",
+                "font": {
+                    "weight": "bold",
+                    "size": 14
+                },
+                "formatter": "function(value) { return value; }"  # Ensures raw counts show up perfectly
+            }
         }
     }
 }
+
 
 # Safely stringify layouts config parameters and completely URL encode it
 chart_json_string = json.dumps(chart_config)
